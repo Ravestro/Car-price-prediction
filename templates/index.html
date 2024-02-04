@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div style="color:blue">
+            <form action="{{url_for('predict')}}" method="post">
+                <h2>Predictive Analysis</h2>
+                <h3>Year</h3>
+                <input id="first" name="Year" type="number">
+                <h3>What is the showroom price?(In Lakhs)</h3>
+                <br><input id="second" name="Present_Price" required="required">
+                <h3>What is the fuel type</h3>
+                <br><select id="fuel" name="Fuel_Type_Petrol" required="required">
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                    </select>
+                <h3>Are you a dealer or Individual</h3>
+                <br><select id="resea" name="Seller_type_individual" required="required">
+                    <option value="Dealer">Dealer</option>
+                    <option value="Individual">Individual</option>
+                    </select>
+                <h3>Transmission type</h3>
+                <br><select id="research" name="Transmission_manual" required="required">
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                    </select>
+                <br><br><button id="sub" type="submit">Calculate the selling price</button>
+                <br>
+        
+            </form>
+        <br><br><h3>{{prediction_text}}</h3>
+        </div>
+
+        <style>
+            body {
+                background-color: lightslategray;
+                text-align: center;
+                padding: 0px
+            }
+
+            #research {
+                font-size: 18px;
+                width: 100px;
+                height: 43px;
+                text-align: center;
+                border-radius: 14px;
+            }
+
+            #researh :hover {
+                background-color: coral;
+            }
+            #fuel {
+                    width: 83px;
+                    height: 43px;
+                    text-align: center;
+                    border-radius: 14px;
+                    font-size: 20px;
+                }
+            #fuel:hover {
+                    background-color: coral;            
+                }
+            #research {
+                font-size: 18px;
+                width: 100px;
+                height: 43px;
+                text-align: center;
+                border-radius: 14px;
+            }
+
+            #researh :hover {
+                background-color: coral;
+            }
+            #first {
+                font-size: 20px;
+                height: 25px;
+                text-align: center;
+                border-radius: 14px;     
+            }
+            #second {
+                font-size: 20px;
+                height: 25px;
+                text-align: center;
+                border-radius: 14px;     
+            }
+            #sub {
+                font-size: 18px;
+                width:  120px;
+                height: 43px;
+                text-align: center;
+                border-radius: 14px;     
+            }
+            #first {
+                font-size: 20px;
+                height: 25px;
+                text-align: center;
+                border-radius: 14px;     
+            }
+        </style>
+    </body>
+</html>
